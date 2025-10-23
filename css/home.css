@@ -1,0 +1,157 @@
+.home-page {
+    background: white;
+}
+
+.home-container {
+    min-height: 100vh;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shape-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50% 40%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Posiciones de categorías */
+.memoria {
+    top: 5%;
+    left: 10%;
+}
+
+.memoria .shape-bg {
+    background: linear-gradient(135deg, #89CFF0, #4A90E2);
+    transform: rotate(-30deg);
+}
+
+.percepcion {
+    top: 10%;
+    right: 5%;
+}
+
+.percepcion .shape-bg {
+    background: linear-gradient(135deg, #FFB366, #FF8C42);
+    transform: rotate(45deg);
+}
+
+.cuerpo {
+    bottom: 15%;
+    left: 5%;
+}
+
+.cuerpo .shape-bg {
+    background: linear-gradient(135deg, #A8D5BA, #6FBF73);
+    transform: rotate(120deg);
+}
+
+.conciencia {
+    bottom: 10%;
+    right: 10%;
+}
+
+.conciencia .shape-bg {
+    background: linear-gradient(135deg, #FFB3D9, #FF85C2);
+    transform: rotate(-45deg);
+}
+
+.category-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+.memoria .category-circle {
+    background: rgba(74, 144, 226, 0.8);
+}
+
+.percepcion .category-circle {
+    background: rgba(255, 140, 66, 0.8);
+}
+
+.cuerpo .category-circle {
+    background: rgba(111, 191, 115, 0.8);
+}
+
+.conciencia .category-circle {
+    background: rgba(255, 133, 194, 0.8);
+}
+
+.category-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.category-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    z-index: 2;
+}
+
+.center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.center-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.center-circle img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+    
+    .category-section {
+        position: relative;
+        margin: 2rem 0;
+    }
+    
+    .shape-bg {
+        width: 250px;
+        height: 250px;
+    }
+}

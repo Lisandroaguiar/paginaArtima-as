@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra de Tesis - Home</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="home-page">
+    <main class="home-container">
+        <!-- Categoría Memoria (Azul - Top) -->
+        <div class="category-section memoria">
+            <div class="shape-bg"></div>
+            <button class="category-circle" data-category="memoria">
+                <span class="circle-letter">M</span>
+            </button>
+            <span class="category-label">Memoria</span>
+        </div>
+
+        <!-- Categoría Percepción (Naranja - Right) -->
+        <div class="category-section percepcion">
+            <div class="shape-bg"></div>
+            <button class="category-circle" data-category="percepcion">
+                <span class="circle-letter">P</span>
+            </button>
+            <span class="category-label">Percepción</span>
+        </div>
+
+        <!-- Logo Central -->
+        <div class="center-logo">
+            <div class="center-circle">
+                <img src="logo-central.svg" alt="Logo Central" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <!-- Categoría Cuerpo (Verde - Left) -->
+        <div class="category-section cuerpo">
+            <div class="shape-bg"></div>
+            <button class="category-circle" data-category="cuerpo">
+                <span class="circle-letter">C</span>
+            </button>
+            <span class="category-label">Cuerpo</span>
+        </div>
+
+        <!-- Categoría Conciencia (Rosa - Bottom) -->
+        <div class="category-section conciencia">
+            <div class="shape-bg"></div>
+            <button class="category-circle" data-category="conciencia">
+                <span class="circle-letter">C</span>
+            </button>
+            <span class="category-label">Conciencia</span>
+        </div>
+    </main>
+
+    <script src="js/layout.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
