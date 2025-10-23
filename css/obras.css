@@ -1,0 +1,166 @@
+.obras-page {
+    padding-top: 80px;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+    font-weight: 300;
+}
+
+.obras-page.memoria .category-title { color: #4A90E2; }
+.obras-page.percepcion .category-title { color: #FF8C42; }
+.obras-page.cuerpo .category-title { color: #6FBF73; }
+.obras-page.conciencia .category-title { color: #FF85C2; }
+
+.carousel-wrapper {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    width: 300px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0.3;
+    transform: scale(0.7);
+    cursor: pointer;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.carousel-item.prev {
+    opacity: 0.6;
+    transform: scale(0.85);
+    left: 20%;
+    z-index: 2;
+}
+
+.carousel-item.next {
+    opacity: 0.6;
+    transform: scale(0.85);
+    right: 20%;
+    z-index: 2;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.work-author {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.carousel-nav:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev { left: 20px; }
+.carousel-nav.next { right: 20px; }
+
+/* Color Bar */
+.color-bar {
+    position: relative;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    margin: 3rem 0;
+}
+
+.color-segment {
+    flex: 1;
+}
+
+.color-segment.memoria { background: #4A90E2; }
+.color-segment.percepcion { background: #FF8C42; }
+.color-segment.conciencia { background: #FF85C2; }
+.color-segment.cuerpo { background: #6FBF73; }
+
+.color-circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #333;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 0.5s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .carousel-item.active {
+        margin-left: -125px;
+    }
+}
