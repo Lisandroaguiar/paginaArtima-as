@@ -1,0 +1,104 @@
+{
+  "works": [
+    {
+      "id": 1,
+      "title": "Resonancias del Pasado",
+      "author": "Pepito González",
+      "categories": ["memoria", "percepcion"],
+      "description": "Proyecto que explora la construcción de la memoria colectiva a través de testimonios orales y archivos fotográficos de tres generaciones de una misma familia. Se analiza cómo los recuerdos se transforman y reinterpretan con el paso del tiempo.",
+      "theme": "Memoria Colectiva",
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/pepito-gonzalez.pdf"
+    },
+    {
+      "id": 2,
+      "title": "Cuerpos en Movimiento",
+      "author": "María López",
+      "categories": ["cuerpo", "percepcion"],
+      "description": "Instalación performática que investiga la relación entre el movimiento corporal y el espacio arquitectónico. Mediante sensores de movimiento, el cuerpo del performer modifica la iluminación y el sonido del espacio en tiempo real.",
+      "theme": "Expresión Corporal",
+      "image": "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/maria-lopez.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Estados de Conciencia",
+      "author": "Juan Pérez",
+      "categories": ["conciencia", "memoria"],
+      "description": "Exploración de los diferentes niveles de percepción y estados mentales a través de instalaciones interactivas que utilizan biofeedback. El proyecto mapea las ondas cerebrales de los participantes y las traduce en experiencias visuales y sonoras inmersivas.",
+      "theme": "Neurociencia Aplicada",
+      "image": "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/juan-perez.pdf"
+    },
+    {
+      "id": 4,
+      "title": "Percepción Aumentada",
+      "author": "Ana Martínez",
+      "categories": ["percepcion", "conciencia"],
+      "description": "Proyecto que explora cómo la tecnología de realidad aumentada puede expandir nuestros sentidos y modificar nuestra percepción de la realidad. Se desarrolló una aplicación móvil que superpone capas de información sensorial sobre el entorno urbano.",
+      "theme": "Realidad Aumentada",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/ana-martinez.pdf"
+    },
+    {
+      "id": 5,
+      "title": "Memorias Fragmentadas",
+      "author": "Carlos Ruiz",
+      "categories": ["memoria"],
+      "description": "Serie fotográfica que documenta espacios abandonados de la ciudad, capturando las huellas y rastros de las personas que alguna vez habitaron esos lugares. Cada imagen va acompañada de relatos recopilados de antiguos habitantes.",
+      "theme": "Memoria e Identidad",
+      "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/carlos-ruiz.pdf"
+    },
+    {
+      "id": 6,
+      "title": "Danza del Cuerpo Digital",
+      "author": "Laura Sánchez",
+      "categories": ["cuerpo", "percepcion"],
+      "description": "Performance que fusiona movimiento corporal con proyecciones interactivas que responden al bailarín en tiempo real. El proyecto investiga cómo la tecnología puede convertirse en una extensión del cuerpo y crear nuevos lenguajes de expresión.",
+      "theme": "Cuerpo y Tecnología",
+      "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/laura-sanchez.pdf"
+    },
+    {
+      "id": 7,
+      "title": "Sinestesia Artificial",
+      "author": "Diego Torres",
+      "categories": ["percepcion", "conciencia"],
+      "description": "Instalación inmersiva que simula experiencias sinestésicas mediante la traducción de estímulos visuales en sonidos y viceversa. El proyecto busca expandir nuestra comprensión de cómo procesamos la información sensorial.",
+      "theme": "Percepción Multisensorial",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/diego-torres.pdf"
+    },
+    {
+      "id": 8,
+      "title": "Rituales Cotidianos",
+      "author": "Sofía Ramírez",
+      "categories": ["conciencia", "cuerpo"],
+      "description": "Documental visual que explora los rituales diarios inconscientes que estructuran nuestra vida cotidiana. A través de secuencias repetitivas y meditativas, se revelan los patrones ocultos de nuestros comportamientos automáticos.",
+      "theme": "Consciencia del Presente",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/sofia-ramirez.pdf"
+    },
+    {
+      "id": 9,
+      "title": "Huellas del Tiempo",
+      "author": "Roberto Fernández",
+      "categories": ["memoria", "cuerpo"],
+      "description": "Proyecto que documenta el proceso de envejecimiento a través de retratos realizados durante 5 años a las mismas personas. Se complementa con entrevistas que exploran cómo cambia la percepción del tiempo y la identidad con los años.",
+      "theme": "Tiempo e Identidad",
+      "image": "https://images.unsplash.com/photo-1509909756405-be0199881695?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/roberto-fernandez.pdf"
+    },
+    {
+      "id": 10,
+      "title": "Paisajes Mentales",
+      "author": "Valentina Ruiz",
+      "categories": ["conciencia", "percepcion"],
+      "description": "Serie de visualizaciones generativas que traducen estados emocionales en paisajes abstractos. Utilizando algoritmos de inteligencia artificial, se crean representaciones visuales únicas de diferentes estados de ánimo y pensamientos.",
+      "theme": "Visualización de Emociones",
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop",
+      "pdfUrl": "pdfs/valentina-ruiz.pdf"
+    }
+  ]
+}
