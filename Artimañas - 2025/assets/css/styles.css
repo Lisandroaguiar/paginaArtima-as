@@ -1,0 +1,1103 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Titan+One&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(170, 90%, 34%);
+  --first-color-dark: hsl(282, 39%, 54%);
+  --first-color-darken: hsl(170, 100%, 23%);
+  --second-color: hsl(45, 100%, 52%);
+  --second-color-dark: hsl(45, 100%, 20%);
+  --white-color: hsl(0, 0%, 100%);
+  --shadow-img: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4));
+  --shadow-circle: 0 12px 24px hsla(0, 0%, 0%, .4);
+  --shadow-button: 0 -4px 8px hsla(0, 0%, 0%, .3);
+  --shadow-card: 0 -8px 24px hsla(0, 0%, 0%, .3);
+  --shadow-text: 0 2px 4px var(--first-color-darken);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Titan One", sans-serif;
+  --biggest-font-size: 3.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* CORRECCIÓN: 
+    Se mueven las variables de posición de los botones aquí.
+    Estos son los valores base (para escritorio).
+  */
+  --offset-top: 34.375rem;
+  --offset-bottom: -6.25;
+  --offset-left: 25.25rem;
+  --offset-right: 20.25rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1000px) {
+  :root {
+    --header-height: 3.5rem;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* CORRECCIÓN: 
+    Se eliminan las propiedades background-image, -position, -repeat, -size y -attachment 
+    porque estaban siendo cubiertas por el pseudo-elemento ::before.
+  */
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: #BE82D8; /* Este es un color de fallback si la imagen no carga */
+  color: var(--white-color);
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('../img/Arquitectura.png'); /* Esta es la imagen que se ve */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*=============== BOTONES ===============*/
+.category-buttons{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* botones: icono arriba, texto abajo */
+/* botones: icono y texto al lado */
+.category-buttons .category-btn{
+  position: absolute;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column; /* <--- CAMBIADO A 'row' (fila) */
+  align-items: center;
+  gap: .5rem;         /* Espacio entre icono y texto */
+  padding: .6rem 1rem;
+  border-radius: 2rem;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  color: #333;
+  font-weight: var(--font-semi-bold);
+  transition: transform .2s ease;
+  text-align: center;
+}
+
+/* imagen del icono */
+.category-buttons .category-icon{
+  width: clamp(48px, 8vw, 96px);
+  height: clamp(48px, 8vw, 96px);
+  object-fit: contain;
+  display: block;
+  border-radius: 50%; /* opcional: redondear el icono */
+  background: transparent;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.12));
+}
+
+/* texto */
+.category-buttons .category-label{
+  display: block;
+  font-size: clamp(.8rem, 1.6vw, 1rem);
+  color: #333;
+}
+
+/* hover */
+.category-buttons .category-btn:hover{
+  transform: translateY(-6px) scale(1.03);
+}
+
+
+/* CORRECCIÓN:
+  Se elimina el primer bloque de posiciones de botones (el que usaba 18%, 10%, etc)
+  porque estaba en conflicto con el bloque de variables de abajo.
+*/
+
+/* Asegurar que el círculo / logo central quede por encima */
+.home__subcircle,
+.home__circle,
+.home__images .home__img, .home__img1{
+  position: relative;
+  z-index: 4;
+}
+
+/* responsive (solo para tamaño de botones) */
+@media (max-width: 768px){
+  .category-btn{ padding: .4rem .8rem; gap: .34rem; }
+  .category-icon{ width: clamp(40px, 12vw,72px); height: clamp(40px, 12vw, 72px); }
+  .category-label{ font-size: .90rem; }
+  
+  /* CORRECCIÓN:
+    Se eliminan las posiciones estáticas (top: 12%, left: 6%) de aquí
+    porque ahora se controlan con las variables de abajo.
+  */
+}
+
+/* CORRECCIÓN:
+  Este es ahora el ÚNICO bloque que controla las posiciones.
+  Usa las variables definidas en :root.
+*/
+.conciencia {
+  top: var(--offset-top);
+  left: var(--offset-left);
+  transform: translate(-90%, -50%);
+}
+
+.percepcion {
+  top: var(--offset-top);
+  right: var(--offset-right);
+  transform: translate(50%, -50%);
+}
+
+.cuerpo {
+  bottom: var(--offset-bottom);
+  left: var(--offset-left);
+  transform: translate(-90%, 50%);
+}
+
+.memoria {
+  bottom: var(--offset-bottom);
+  right: var(--offset-right);
+  transform: translate(50%, 50%);
+}
+
+/* Ajustes responsive (para las variables de posición) */
+@media (max-width: 768px) {
+  /* Aquí sobreescribimos las variables de :root 
+    solo para pantallas más pequeñas.
+  */
+  :root {
+    --offset-top: 350px;
+    --offset-bottom: -20px;
+    --offset-left: 140px;
+    --offset-right: 90px;
+
+
+.cuerpo.category-btn {
+  padding: .8rem 1.5rem; /* Más padding (relleno) */
+}
+
+.cuerpo .category-icon {
+  width: 110px;  /* Icono más grande */
+  height: 110px;
+    margin-top: 30px;
+
+}
+
+.cuerpo .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+.percepcion.category-btn {
+  padding: .4rem 1.5rem; /* Más padding (relleno) */
+}
+
+.percepcion .category-icon {
+  width: 110px;  /* Icono más grande */
+  height: 110px;
+  margin-top: 30px;
+}
+
+.conciencia .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+.conciencia.category-btn {
+  padding: .8rem 1.5rem; /* Más padding (relleno) */
+}
+
+.conciencia .category-icon {
+  width: 110px;  /* Icono más grande */
+  height: 110px;
+    margin-top: 30px;
+
+}
+
+.percepcion .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+/* EJEMPLO: Hacer el botón 'Memoria' MÁS CHICO */
+.memoria.category-btn {
+  padding: .4rem .8rem; /* Menos padding */
+}
+
+.memoria .category-icon {
+  width: 110px;  /* Icono más chico */
+  height: 110px;
+    margin-top: 30px;
+
+}
+
+.memoria .category-label {
+  font-size: 1.1rem; /* Texto más chico */
+}
+
+
+
+
+ 
+}}
+/* --------------- ESTILOS INDIVIDUALES DE BOTONES --------------- */
+
+/* EJEMPLO: Hacer el botón 'Cuerpo' MÁS GRANDE */
+.cuerpo.category-btn {
+  padding: .8rem 1.5rem; /* Más padding (relleno) */
+}
+
+.cuerpo .category-icon {
+  width: 220px;  /* Icono más grande */
+  height: 220px;
+}
+
+.cuerpo .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+.percepcion.category-btn {
+  padding: .8rem 1.5rem; /* Más padding (relleno) */
+}
+
+.percepcion .category-icon {
+  width: 220px;  /* Icono más grande */
+  height: 220px;
+}
+
+.conciencia .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+.conciencia.category-btn {
+  padding: .8rem 1.5rem; /* Más padding (relleno) */
+}
+
+.conciencia .category-icon {
+  width: 220px;  /* Icono más grande */
+  height: 220px;
+}
+
+.percepcion .category-label {
+  font-size: 1.1rem; /* Texto más grande */
+}
+
+/* EJEMPLO: Hacer el botón 'Memoria' MÁS CHICO */
+.memoria.category-btn {
+  padding: .4rem .8rem; /* Menos padding */
+}
+
+.memoria .category-icon {
+  width: 180px;  /* Icono más chico */
+  height: 180px;
+}
+
+.memoria .category-label {
+  font-size: 1.1rem; /* Texto más chico */
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  font: var(--font-regular) var(--h1-font-size) var(--second-font);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: var(--shadow-text);
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s;
+  padding: 0 1rem;
+}
+/* Modifica el container para el nav */
+.nav.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 2rem; /* mantiene un poco de padding en los laterales */
+}
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+    
+}
+/* Para dispositivos móviles */
+@media screen and (max-width: 1000px) {
+    .nav__menu {
+        border-radius: 2rem 0 0 2rem; /* Redondea solo las esquinas izquierdas en móvil */
+        /* ...existing code... */
+    }
+}
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo-img {
+    height: 4.5rem; /* Ajusta este valor según el tamaño que necesites */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Hacer el logo responsive para móviles */
+@media screen and (max-width: 768px) {
+    .nav__logo-img {
+        height: 4rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .nav__logo-img {
+    height: 2.25rem; /* Ajusta este valor según el tamaño que necesites */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+}
+
+.nav__close,
+.nav__toggle{
+  display: flex;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f28E61;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1000px){
+  .nav__menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: #BE82D8;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 1.5rem 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left .4s;
+  }
+}
+
+.nav__list,
+.nav__social{
+  display: flex;
+  color: #f28E61;
+}
+
+.nav__list{
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link{
+  color: #f28E61;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: color .4s;
+}
+
+.nav__link:hover{
+color: #f28E61;
+}
+
+.nav__close{
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+
+.nav__social{
+  column-gap: 1rem;
+  align-self: flex-end;
+  color: #f28E61;
+}
+.nav__social-link{
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: color .4s;
+    color: #f28E61;
+}
+/* CORRECCIÓN:
+  Se corrigió el error de tipeo ":hoover" a ":hover" 
+  y se quitó el espacio indebido.
+*/
+.nav__social-link:hover{
+  color: #f28E61;
+}
+/* Show menu */
+.show-menu{
+  left: 0;
+}
+
+/* CORRECCIÓN:
+  Se eliminó una llave de cierre '}' extra que estaba aquí 
+  y rompía el resto del archivo CSS.
+*/
+
+/* Shadow header */
+.shadow-header{
+box-shadow: 0 2px 16px hsla(0, 0%, 0%, .15);
+}
+
+/* Active link */
+.active-link{
+  color: var(--second-color);
+}
+
+/*=============== HOME ===============*/
+.home__container{
+  padding-top: 1.5rem;
+  justify-content: center;
+  row-gap: 4rem;
+  width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 9rem 1rem;
+}
+
+
+.home__data{
+  position: relative;
+  text-align: center;
+}
+
+.home__title{
+  font: var(--font-regular) var(--biggest-font-size)   var(--second-font);
+  line-height: 100%;
+  margin-bottom: 1rem;
+  text-shadow: var(--shadow-text);
+}
+
+.home__meat{
+  width: 40px;
+  position: absolute;
+  top: 9rem;
+  right: 0;
+  opacity: .5;
+}
+
+.home__description{
+margin-bottom: 2.5rem;
+}
+.home__buttons{
+display: flex;
+justify-content: center;
+align-items: center;
+column-gap: 1rem;
+}
+
+.home__images{
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+}
+
+.home__circle{
+  width: 3020px;
+  height: 320px;
+  background-color: var(--first-color-dark);
+  border-radius: 50%;
+  box-shadow: inset var(--shadow-circle);
+  display: grid;
+  place-items: center;
+}
+
+.home__subcircle{
+  width: 300px;
+  height: 300px;
+  background-color: #ffFFFF;
+  border-radius: 50%;
+  box-shadow: inset var(--shadow-circle);
+
+}
+
+.home__images .home__img{
+width: 250px;
+filter:  var(--shadow-img);
+position: absolute;
+
+}
+  .home__images .home__img1 {
+    width: 250px;
+    animation: fadeIn 4s ease forwards;
+    animation-delay: 2s;
+}
+
+
+.home__images img{
+  width: 60px;
+  filter: var(--shadow-img);
+  position: absolute;
+
+}
+
+.home__chips-1{
+      position: absolute;   /* ajustar según necesites */
+    left: 5%;
+    transform: translate(0, 0); /* usar translate para ajustes finos */
+    z-index: 5;
+}
+.home__chips-2{
+bottom: -.74rem;
+right: .5rem;
+}
+.home__chips-3{
+top: .25rem;
+left: -.5rem;
+}
+
+.home__tomato-1{
+  top: -1.5rem;
+  right: 2.5rem;
+}
+
+.home__tomato-2{
+left: 3.5rem;
+bottom: -1.5rem;
+}
+
+.home__leaf{
+  left: -.75rem;
+}
+
+/*=============== BUTTON ===============*/
+.button{
+  background-color: var(--second-color);
+  color: var(--second-color-black);
+  font-weight: var(--font-semi-bold);
+  padding: .75rem 2rem;
+  border-radius: 4rem;
+  box-shadow: inset var(--shadow-button);
+}
+
+.button__ghost{
+  background-color: transparent;
+  box-shadow: none;
+  border: 3px solid var(--second-color);
+  color: var(--second-color);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  background-color: hsl(170, 50%,30%);
+
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: hsl(170, 50%,20%);
+
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(170, 50%,15%);
+}
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--first-color-dark);
+  color: var(--white-color);
+  box-shadow: inset var(--shadow-button);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  border-radius: .25rem;
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
+
+.scrollup:hover{
+  transform: translateY(-.5rem);
+}
+
+/* Show Scroll Up */
+.show-scroll{
+  bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+    .home__container {
+        padding-top: 20vh; /* Ajusta para móviles */
+    }
+    
+    .home__circle {
+        width: 175px;
+        height: 175px;
+    }
+    
+    .home__subcircle {
+        width: 175px;
+        height: 174px;
+    }
+    .home__images .home__img1 {
+    width: 140px;
+    animation: fadeIn 4s ease forwards;
+    animation-delay: 2s;
+}
+.home__images .home__img{
+width: 150px;
+filter:  var(--shadow-img);
+position: absolute;
+
+}
+
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* CORRECCIÓN:
+  Se añadió un espacio entre "and" y "(max-width...)"
+*/
+@media screen and (max-width: 300px){
+  .container{
+    margin-inline: 1rem;
+  }
+
+  .section__title{
+    font-size: var(--h2-font-size);
+  }
+
+  .home__title{
+    font-size: 3rem;
+  }
+  .home__buttons{
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .home__circle{
+  width: 250px;
+  height: 250px;
+  }
+  .home__subcircle{
+    width: 200px;
+    height: 200px;
+  }
+  .home__images .home__img{
+    width: 200px;
+  }
+  .home__images .home__img1 {
+    width: 200px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 2s;
+}
+.products__content{
+  grid-template-columns: 160px;
+  justify-content: center;
+}
+
+.footer__content{
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 1.5rem;
+}
+
+.footer__copy{
+  grid-column: 1;
+
+}
+
+
+
+
+}
+
+/* For medium devices */
+@media screen and (min-width: 540px){
+  .home__container,
+  .favorites__container,
+  .care__container{
+    grid-template-columns: 370px;
+    justify-content: center;
+  }
+
+  .favorites__swiper{
+    max-width: 600px;
+    overflow-x: clip;
+    justify-self: center;
+  }
+.products__container{
+  grid-template-columns: repeat(2, 160px);
+  justify-content: center;
+}
+.contact{
+  display: grid;
+  grid-template-columns: 450px;
+  justify-content: center;
+}
+}
+
+@media screen and (min-width: 768px){
+  .products__content{
+    grid-template-columns: repeat(3, 160px);
+  }
+
+  .contact{
+    grid-template-columns: 550px;
+  }
+
+  .footer__content{
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__copy{
+    grid-column: initial;
+  }
+
+  .footer__link:nth-child(2){
+    order:1;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1000px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .section{
+    padding-block: 7rem 2rem;
+  }
+  .section__title{
+    margin-bottom: 2rem;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__link{
+    font-size: var(--normal-font-size);
+    color: #f28E61;
+  }
+
+  .nav__menu{
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+  }
+  .nav__list{
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  .home__container{
+    
+    align-items: center;
+    column-gap: 6rem;
+    padding-top: 5rem;
+  }
+
+  .home__data{
+    text-align: initial;
+
+  }
+
+  .home__title{
+    margin-bottom: 1.5rem;
+  }
+  .home__description{
+    margin-bottom: 4rem;
+  }
+  .home__buttons{
+    justify-content: initial;
+    column-gap: 1.5rem;
+  }
+  .home__meat{
+    width: 80px;
+    top: 13rem;
+  }
+  .home__circle{
+    width: 550px;
+    height: 550px;
+  }
+  .home__subcircle{
+    width: 510px;
+    height: 510px;
+  }
+
+.home__images .home__img {
+    width: 400px;
+    opacity: 1;
+}
+
+.home__images .home__img1 {
+    width: 400px;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  }
+
+  .home__images img{
+    width: 95px;
+  }
+
+  .favorites__container{
+    grid-template-columns: 520px;
+    row-gap: 4rem;
+  }
+
+  .favorites__cheese-1,
+  .favorites__cheese-2{
+    width: 80px;
+  }
+
+  .favorites__cheese-1{
+    right: -18rem;
+  }
+  .favorites__cheese-2{
+    right: -18rem;
+  }
+  .favorites__swiper{
+    max-width: 1000px;
+  }
+
+  .favorites__article,
+  .favorites__img{
+    width: 320px;
+  }
+
+  .favorites__leaf-1,
+  .favorites__leaf-2{
+    width: 110px;
+  }
+
+  .care__container{
+    grid-template-columns: 500px 410px;
+    column-gap: 6rem;
+    align-items: center;
+    padding-block: 4rem;
+  }
+  .care__img{
+    width: 550px;
+    order: -1;
+  }
+
+  .care__item{
+    column-gap: 1rem;
+  }
+
+  .care__item i{
+    font-size: 2rem;
+  }
+  .banner{
+    padding-top: 4rem;
+  }
+
+  .banner__list{
+    column-gap: 6.5rem;
+  }
+
+  .banner__item{
+    column-gap: 1rem;
+  }
+  .banner__item i{
+    font-size: 4.5rem;
+  }
+  .banner__item span{
+    font-size: var(--h1-font-size);
+  }
+  .products__container{
+    padding-top: 7.5rem;
+  }
+  .products__content{
+    grid-template-columns: repeat(3, 250px);
+    gap: 10rem 4rem;
+  }
+
+  .products__card{
+    padding: 11rem 2rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .products__img{
+    width: 170px;
+    top: -5rem;
+  }
+  .products__subtitle{
+    font-size: var(--normal-font-size);
+  }
+
+  .products__price{
+    font-size: var(--h3-font-size);
+  }
+
+  .products__button{
+    right: 2rem;
+    bottom: 2rem;
+    padding: 6px;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+  }
+.products__crab,
+.products__hamburger,
+.products__cheese{
+  width: 80px;
+}
+.products__crab{
+  top: 2rem;
+}
+.products__hamburger{
+  top: 30rem;
+  right: 3rem;
+}
+.products__cheese{
+  left: 4rem;
+  margin: initial;
+}
+
+.contact{
+  display: block;
+}
+.contact__container{
+  border-radius: 4rem;
+}
+.contact__content{
+  grid-template: 330px / 360px 320px;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 10rem;
+  padding-top: 2rem;
+}
+.contact__data{
+  text-align: initial;
+  grid-template: max-content / repeat(2, max-content);
+  gap: 3rem 2rem;
+}
+.contact__title{
+  margin-bottom: .75rem;
+
+}
+.contact__social{
+  justify-content: initial;
+}
+.contact__img{
+  width: 320px;
+  transform: translateY(-6rem);
+}
+.contact__shrimp,
+.contact__crab,
+.contact__meat{
+  width: 80px;
+}
+.contact__shrimp{
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 20rem;
+}
+.contact__crab{
+  top: 5rem;
+  left: 4rem;
+}
+.contact__meat{
+  right: initial;
+  left: 12rem;
+  bottom: -1rem;
+}
+
+.footer{
+  padding-block: 5rem 3rem;
+}
+.footer__container{
+  row-gap: 3rem;
+}
+
+.scrollup{
+  right: 3rem;
+}
+
