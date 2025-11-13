@@ -1,104 +1,272 @@
-{
-  "works": [
-    {
-      "id": 1,
-      "title": "Resonancias del Pasado",
-      "author": "Pepito González",
-      "categories": ["memoria", "percepcion"],
-      "description": "Proyecto que explora la construcción de la memoria colectiva a través de testimonios orales y archivos fotográficos de tres generaciones de una misma familia. Se analiza cómo los recuerdos se transforman y reinterpretan con el paso del tiempo.",
-      "theme": "Memoria Colectiva",
-      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/pepito-gonzalez.pdf"
-    },
-    {
-      "id": 2,
-      "title": "Cuerpos en Movimiento",
-      "author": "María López",
-      "categories": ["cuerpo", "percepcion"],
-      "description": "Instalación performática que investiga la relación entre el movimiento corporal y el espacio arquitectónico. Mediante sensores de movimiento, el cuerpo del performer modifica la iluminación y el sonido del espacio en tiempo real.",
-      "theme": "Expresión Corporal",
-      "image": "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/maria-lopez.pdf"
-    },
-    {
-      "id": 3,
-      "title": "Estados de Conciencia",
-      "author": "Juan Pérez",
-      "categories": ["conciencia", "memoria"],
-      "description": "Exploración de los diferentes niveles de percepción y estados mentales a través de instalaciones interactivas que utilizan biofeedback. El proyecto mapea las ondas cerebrales de los participantes y las traduce en experiencias visuales y sonoras inmersivas.",
-      "theme": "Neurociencia Aplicada",
-      "image": "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/juan-perez.pdf"
-    },
-    {
-      "id": 4,
-      "title": "Percepción Aumentada",
-      "author": "Ana Martínez",
-      "categories": ["percepcion", "conciencia"],
-      "description": "Proyecto que explora cómo la tecnología de realidad aumentada puede expandir nuestros sentidos y modificar nuestra percepción de la realidad. Se desarrolló una aplicación móvil que superpone capas de información sensorial sobre el entorno urbano.",
-      "theme": "Realidad Aumentada",
-      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/ana-martinez.pdf"
-    },
-    {
-      "id": 5,
-      "title": "Memorias Fragmentadas",
-      "author": "Carlos Ruiz",
-      "categories": ["memoria"],
-      "description": "Serie fotográfica que documenta espacios abandonados de la ciudad, capturando las huellas y rastros de las personas que alguna vez habitaron esos lugares. Cada imagen va acompañada de relatos recopilados de antiguos habitantes.",
-      "theme": "Memoria e Identidad",
-      "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/carlos-ruiz.pdf"
-    },
-    {
-      "id": 6,
-      "title": "Danza del Cuerpo Digital",
-      "author": "Laura Sánchez",
-      "categories": ["cuerpo", "percepcion"],
-      "description": "Performance que fusiona movimiento corporal con proyecciones interactivas que responden al bailarín en tiempo real. El proyecto investiga cómo la tecnología puede convertirse en una extensión del cuerpo y crear nuevos lenguajes de expresión.",
-      "theme": "Cuerpo y Tecnología",
-      "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/laura-sanchez.pdf"
-    },
-    {
-      "id": 7,
-      "title": "Sinestesia Artificial",
-      "author": "Diego Torres",
-      "categories": ["percepcion", "conciencia"],
-      "description": "Instalación inmersiva que simula experiencias sinestésicas mediante la traducción de estímulos visuales en sonidos y viceversa. El proyecto busca expandir nuestra comprensión de cómo procesamos la información sensorial.",
-      "theme": "Percepción Multisensorial",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/diego-torres.pdf"
-    },
-    {
-      "id": 8,
-      "title": "Rituales Cotidianos",
-      "author": "Sofía Ramírez",
-      "categories": ["conciencia", "cuerpo"],
-      "description": "Documental visual que explora los rituales diarios inconscientes que estructuran nuestra vida cotidiana. A través de secuencias repetitivas y meditativas, se revelan los patrones ocultos de nuestros comportamientos automáticos.",
-      "theme": "Consciencia del Presente",
-      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/sofia-ramirez.pdf"
-    },
-    {
-      "id": 9,
-      "title": "Huellas del Tiempo",
-      "author": "Roberto Fernández",
-      "categories": ["memoria", "cuerpo"],
-      "description": "Proyecto que documenta el proceso de envejecimiento a través de retratos realizados durante 5 años a las mismas personas. Se complementa con entrevistas que exploran cómo cambia la percepción del tiempo y la identidad con los años.",
-      "theme": "Tiempo e Identidad",
-      "image": "https://images.unsplash.com/photo-1509909756405-be0199881695?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/roberto-fernandez.pdf"
-    },
-    {
-      "id": 10,
-      "title": "Paisajes Mentales",
-      "author": "Valentina Ruiz",
-      "categories": ["conciencia", "percepcion"],
-      "description": "Serie de visualizaciones generativas que traducen estados emocionales en paisajes abstractos. Utilizando algoritmos de inteligencia artificial, se crean representaciones visuales únicas de diferentes estados de ánimo y pensamientos.",
-      "theme": "Visualización de Emociones",
-      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop",
-      "pdfUrl": "pdfs/valentina-ruiz.pdf"
-    }
-  ]
-}
+[
+  {
+    "id": "agustin-galeazzi",
+    "nombre": "Agustin galeazzi",
+    "obra": "Cuerpos mecanicos",
+    "categoria": "CUERPO: obras que inquieren acerca de la alteración de cuerpos e identidades, la construcción de nuevas formas de ser y estar.",
+    "descripcion": "Es un prototipo de una prótesis funcional de un ante brazo ,brazo y dedos, los cuales se pueden accionar mediante un dispositivo de captura de gestos que se encargan de transmitir los movimientos de la mano del usuario la cual va a estar tapada con la intensión de dar un mayor impacto y generar en el usuario la sensación de perder un miembro",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "agustina-gil-ttudor",
+    "nombre": "Agustina Gil tTudor",
+    "obra": "Linaje etéreo (ex Memoria olfativa)",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Linaje etéreo es una obra donde predomina el estímulo del olfato, donde el usuario podrá recorrerla e interactuar con múltiples olores",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "alex-ruiz",
+    "nombre": "Alex Ruiz",
+    "obra": "Kraken",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "La obra consiste en una experiencia interactiva en la cual el usuario puede ver en forma real como es un calamar gigante. Mediante el uso del celular puede ir recorriendo y escaneando la maqueta del calamar e ir viendo como es en su forma realista a través de una representación 3D. Al mismo tiempo, puede descubrir la historia del mito del kraken, ya que esta acompañado de una representación del hundimiento de un barco de la época.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "bautista-felli",
+    "nombre": "Bautista Felli",
+    "obra": "palimpzZzesto",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "palimpzZzesto propone un ida y vuelta con el usuario, tensionando el espacio en el que se encuentra, y el propio lenguaje del meme. En esta obra, lo solemne se diluye y circula en la red, moldeando una identidad colectiva que nos invita a pensar al meme como artefacto cultural en disputa.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "bernarda-guanuco",
+    "nombre": "Bernarda Guanuco",
+    "obra": "Qhaway",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "Nos contaron una historia.\nUn cuento donde venimos de los barcos.\n\nQhaway —que en quechua significa mirar— nos invita a abrir ese libro y revelar sus partes ocultas, aquello que no se quiere ver.\nLa obra propone un gesto de memoria encarnada en el espectador: mirar con las manos, con la piel, con la historia que nos habita, invitándonos a reescribirla",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "camilo-parisi",
+    "nombre": "Camilo Parisi",
+    "obra": "Eco",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Eco es una obra inmersiva, donde la luz y el sonido modifican el entorno a partir del movimiento del cuerpo de quien interactúa. Este gesto, en principio individual, deja una huella sonora y lumínica que se transforma cada vez que la obra se activa, la sumatoria de todos sus espectadores la vuelve así, una obra colectiva.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "catalina-cella",
+    "nombre": "Catalina Cella",
+    "obra": "Nocturno",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Nocturno es una obra que ofrece una conexión con el más allá a través de un portal hacia un jardín especial, en donde el espíritu de un gato querido te puede visitar por las noches al despertarse de su estatua. Eso sí, lo único con lo que se despierta es con comida, por lo que, en su altar, hay que darle una de sus galletas de pescado favoritas.\nEsta obra busca mostrar cómo, mediante la animación, se puede crear historias y mundos alejados de nuestra realidad física, como por ejemplo, pudiendo “traer de regreso” a una mascota que ya no está en este plano.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "catalina-muñoz",
+    "nombre": "Catalina Muñoz",
+    "obra": "Edición limitada",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Edición limitada pone en tensión los discursos de empoderamiento femenino que circulan en las redes sociales. La obra cuestiona cómo la industria pornográfica y prostituyente se reconfigura en el entorno digital bajo la apariencia de libertad, deseo y éxito.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "daniela-ruiz-diaz",
+    "nombre": "Daniela Ruiz Diaz",
+    "obra": "Sujeto en Red",
+    "categoria": "CUERPO: obras que inquieren acerca de la alteración de cuerpos e identidades, la construcción de nuevas formas de ser y estar.",
+    "descripcion": "\"Sujeto en Red\" explora las intenciones que orientan la acción del sujeto-artista en el arte generativo. Propone que la pérdida de control nos permite reconocernos como parte del mundo, y no como individuos separados que ejercen control y posesión sobre él. La obra problematiza la noción de agencia individual para dar lugar a un sujeto posthumanista configurado a través de un colectivo heterogéneo, donde toda acción humana se entiende como resultado de un proceso compartido.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "elias-elgueta",
+    "nombre": "Elias Elgueta",
+    "obra": "Analog Live",
+    "categoria": "CUERPO: obras que inquieren acerca de la alteración de cuerpos e identidades, la construcción de nuevas formas de ser y estar.",
+    "descripcion": "Mi obra consiste en dispositivos analógicos y digitales que funcionan a partir de la interacción del cuerpo en la creación de música y patrones rítmicos en tiempo real.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "fausto-molina",
+    "nombre": "Fausto Molina",
+    "obra": "caVRnaval",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "caVRnaval es una experiencia inmersiva en realidad virtual que reconstruye la evolución del carnaval artesanal de Lincoln, explorando cómo las carrozas pueden encontrar una nueva forma de permanencia a través de los medios digitales. A lo largo de tres épocas, el espectador acompaña las distintas carrozas, desde las primeras de cartapesta hasta las actuales, sumergiéndose en su estética, su música y su espíritu festivo. La obra propone una reflexión sobre la memoria colectiva y el rol del diseño multimedial en la preservación de las manifestaciones populares.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "florencia-a-serantes",
+    "nombre": "Florencia A. Serantes",
+    "obra": "Una artimaña a la mirada domesticada",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "\"Una artimaña a la mirada domesticada\", propone poner en crisis la percepción naturalizada del consumo de productos derivados de animales, a través del diseño de un producto publicitario que juega con la familiaridad emocional hacia los animales de compañía y el ocultamiento habitual en la industria alimenticia.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "joaquín-aguilera",
+    "nombre": "Joaquín Aguilera",
+    "obra": "ArtNotFound",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Mi obra consiste en un video juego, emplazado en una trama de 4 TVs de tubo (2x2) que trata sobre un grafitero que busca desconfigurar un ciudad dominada por una fuerza superior artificial, que busca neutralizar el impulso creativo humano. Los TV, se van a prender dependiendo de donde este ubicado el jugador en el mapa del juego, es decir, si el jugador recorre el mapa, se irán prendiendo los TV correspondientes. El mando del juego, es una lata de grafiti (inalámbrica e intervenida), en concordancia con la herramienta del personaje para combatir a esta fuerza superior. El jugador debe recorrer la totalidad del mapa buscando las latas dispersas en su amplitud, y combatir a los bots enviados por la IA para neutralizar el impulso creativo de los artistas, una vez llegado a la parte final, el jugador enfrentará a la fuerza dominante en un encuentro entre el proceso artístico humano y la automatización maquinica.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "juan-augusto-borges",
+    "nombre": "Juan Augusto Borges",
+    "obra": "Citrus",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Citrus es una juego de ritmo en el cual encarnas el papel de 409-C quien trabaja para la república de Ácrux. Se te ha dado el papel de iniciar la mega-computadora Citrus, la cuál unificar todos los dispositivos y ciudades del país. Pero el código es tan falible y ambicioso como la naturaleza humana.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "judith-zorzoli",
+    "nombre": "Judith Zorzoli",
+    "obra": "Entre el Eco y el pulso",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "La obra invita al espectador a experimentar la percepción subjetiva del tiempo a través del movimiento. Esta experiencia, en la que el tiempo parece expandirse o contraerse, invita a reflexionar sobre la relación entre memoria, percepción y presencia, proponiendo un encuentro íntimo con la dimensión temporal.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "julián-gabriel-alvarez",
+    "nombre": "Julián Gabriel Alvarez",
+    "obra": "JOAJU",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Basada en los ejes de la Educación Sexual Integral, “JOAJU” es una obra que propone una experiencia de juego cooperativo en la que un grupo de animales buscan proteger su hogar, un lugar en el que todes sean aceptados por quienes son y se encuentren finalmente a salvo de los cazadores y los peligros que acechan.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "lisandro-aguiar",
+    "nombre": "Lisandro Aguiar",
+    "obra": "Los medios sean unidos",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "Consiste en un tejido el cual se activa mediante la danza colectiva, más específicamente una ronda de chacarera. Buscando con esto una unión no jerárquica entre tradición y tecnología y discutiendo la construcción colectiva dentro de la tradición.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "luciana-ungaro",
+    "nombre": "Luciana Ungaro",
+    "obra": "Simbiosis",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Simbiosis es una instalación lumínica interactiva donde los usuarios pueden sumar colores para transformarla. Para mantener viva y en movimiento la obra, será necesario entrar en un diálogo creativo con el propio sistema.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "lucila-isabel-lópez",
+    "nombre": "Lucila Isabel López",
+    "obra": "Neura",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Neura permite la conexión entre diseño multimedial, performance, moda y experimentación tecnológica. Se trata de un vestible aumentado que funciona como extensión del cuerpo, donde la luz se convierte en un lenguaje expresivo controlado en tiempo real desde TouchDesigner. La prenda responde con secuencias lumínicas que reflejan los movimientos de la persona que realiza la performance y se sincronizan con la música, transformando gesto y sonido en experiencia visual.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "luna-lazaletta",
+    "nombre": "Luna Lazaletta",
+    "obra": "Íntimo",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Íntimo\nDos cuerpos que no se tocan, pero se sienten.\nÍntimo explora la posibilidad de una cercanía que atraviesa la distancia, un modo de permanecer presente cuando el cuerpo ya no está cerca. El calor se convierte en un puente: una señal silenciosa que traduce el afecto en materia.\nAquí, la distancia no separa; se vuelve espacio para el encuentro, lugar donde el recuerdo y la presencia se confunden. El gesto, mínimo pero profundo, recuerda que seguimos conectados incluso en la ausencia.\nLa obra no busca simular la presencia, sino transformarla: traducir lo humano en temperatura, lo emocional en materia. Íntimo propone una forma de encuentro donde la distancia se vuelve vínculo, y el calor, una manera de volver a estar juntos.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "malena-latorre",
+    "nombre": "Malena Latorre",
+    "obra": "Pachamama Kurku",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "Pachamama Kurku es una obra que busca cambiar las perspectivas que uno tiene sobre celebraciones de otras culturas, invitando de manera amigable a experimentar algunas características tradicionales del Carnaval de Jujuy.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "manuela-barba",
+    "nombre": "Manuela Barba",
+    "obra": "Vitrinas vacías",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "\"Vitrinas vacías\" es una obra de carácter contemplativo que cuestiona los discursos que romantizan la prostitución y la presentan como una forma de empoderamiento para las mujeres. A través de cuatro escenarios, se pone en tensión lo visible y lo oculto, revelando las huellas de una \"libertad\"? y de una intimidad convertida en espectáculo. Lo que se muestra y lo que se oculta en los discursos y representaciones que nos rodean conviven en un mismo espacio, evocando presencias ausentes y apelando a una mirada crítica por parte del espectador.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "martin-fortain",
+    "nombre": "Martin Fortain",
+    "obra": "Sonare",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Sonare, propone una experiencia inmersiva donde el sonido se convierte en el único medio de percepción en el espacio. Un lugar donde la imagen es ausente, el usuario se adentra a un entorno que activa con su voz, transformando el silencio en materia sonora. A través de la interacción, la obra invita a escuchar cómo el espacio se construye y se modifica con cada gesto: el sonido como territorio sensible.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "martina-hermida",
+    "nombre": "Martina Hermida",
+    "obra": "co - lab",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "co - lab es una instalación interactiva que invita a los usuarios a crear juntos en tiempo real, explorando la colaboración como forma de pensamiento y acción. A través de una interfaz digital compartida, cada participante influye en la forma final de la obra, haciendo visibles los procesos de diálogo, negociación y desacuerdo. El resultado es una pieza visual que se transforma constantemente según las decisiones colectivas. La obra busca reflexionar sobre la autoría compartida, las dinámicas del trabajo conjunto y el papel del conflicto dentro de la creación colaborativa, proponiendo al arte como un espacio común donde el resultado depende de la interacción entre muchas voces.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "micaela-zingales",
+    "nombre": "Micaela Zingales",
+    "obra": "Moldeate",
+    "categoria": "CUERPO: obras que inquieren acerca de la alteración de cuerpos e identidades, la construcción de nuevas formas de ser y estar.",
+    "descripcion": "Moldeate es una experiencia web que invita a explorar la construcción de la identidad en entornos digitales. Propone una reflexión sobre las elecciones, los rasgos que nos definen y las formas que asumimos al habitar lo virtual.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "pereyra-francisco-martín",
+    "nombre": "Pereyra Francisco Martín",
+    "obra": "La riflessione di due spettri",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Mi obra consiste en concientizar sobre el suicidio, la depresión y la ansiedad de aquellas personas que no saben, no pueden o prefieren ignorar su dolor frente los demás y consigos mismos. Todo representado en un baño y un reflejo.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "ramiro-fernández-camillo",
+    "nombre": "Ramiro Fernández Camillo",
+    "obra": "Lo visible del campo ciego",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "Mi obra consiste en una función breve de cine donde se reproducirán 3 escenas de distintas peliculas. Al mismo tiempo para empezar la función, cada espectador deberá conectarse con su celular una página, dónde al comenzar la función se reproducira otra video donde se veran escenas que suceden fuera de campo de la pantalla principal. El espectadora decidirá si ver la pantalla principal o lo que muestra el celular.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "richard-de-la-fuente",
+    "nombre": "Richard De La Fuente",
+    "obra": "Cápsula Profética",
+    "categoria": "MEMORIA: obras que recuerdan la cultura, preservan historias y hablan de la identidad compartida.",
+    "descripcion": "Instalación interactiva que mezcla tecnología y ritual, dentro de la capsula monolítica una inteligencia se activa por el soplo del usuario, luego vía luces sonido e imagen la \"entidad\" responde muta y aprende de la interacción. La obra propone una experiencia mística lúdica donde se mezcla una narrativa antigua en un soporte tecnológico, buscando revivir el archivo.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "santiago-delfino",
+    "nombre": "Santiago Delfino",
+    "obra": "Ahora un poema",
+    "categoria": "PERCEPCIÓN: obras que apelan a los sentidos, la experiencia corporal y sensorial de lo que nos rodea.",
+    "descripcion": "CÁMARA SENSIBLE\n\nUna cámara instantánea que ya no captura imágenes, sino atmósferas.\nAl presionar el disparador, el dispositivo registra datos del entorno como la luz, la temperatura, la humedad o el ruid, y los traduce en un poema. Cada ticket es un recuerdo sensible del instante: una huella generada por el ambiente en lugar de una fotografía.\n\nLa obra resignifica un objeto tecnológico antiguo, desplazando su función original hacia una experiencia poética y generativa. En lugar de congelar la imagen visual, la cámara busca registrar lo intangible: el clima, el sonido, el calor del momento. Así, el dispositivo propone una nueva forma de archivo, en la que el recuerdo se construye desde la sensibilidad del entorno más que desde la representación óptica.",
+    "imagen": "",
+    "tesina": ""
+  },
+  {
+    "id": "virginia-garcia",
+    "nombre": "Virginia Garcia",
+    "obra": "Obrera Digital",
+    "categoria": "CONCIENCIA: obras que apelan a lo emocional, lo ético y la complejidad de las relaciones humanas, denuncian y rompen con lo establecido.",
+    "descripcion": "Obrera Digital exhibe la promesa de autonomía y la realidad de la autoexplotación. Es una obra que critica los modos de trabajo precarizados y feminizados.\nLejos de la promesa de libertad, el trabajo digital actual reproduce lógicas de explotación históricamente ligadas al trabajo doméstico: invisibilización, multitarea constante y falta de reconocimiento. A la trabajadora digital se le promete independencia y flexibilidad, pero detrás de la pantalla miles de mujeres trabajan sin horarios, sin garantías y sin reconocimiento. El cuerpo, una vez más, se convierte en territorio de autoexplotación.",
+    "imagen": "",
+    "tesina": ""
+  }
+]
