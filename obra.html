@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obra - Detalle</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/obra.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obra</title>
+  <link rel="stylesheet" href="css/obra.css" />
 </head>
-<body class="obra-page">
-    <main class="work-detail-container">
-        <div class="work-gallery">
-            <button class="gallery-nav prev" id="galleryPrev">‹</button>
-            <div class="gallery-image" id="galleryImage"></div>
-            <button class="gallery-nav next" id="galleryNext">›</button>
-        </div>
+<body id="obra-page">
+  <main class="obra-container">
+    <div class="obra-info">
+      <h1 id="titulo-obra"></h1>
+      <p id="nombre-alumno"></p>
+      <p id="descripcion-obra"></p>
+      <a id="descargar-tesina" class="btn-descarga" href="#" target="_blank">Descargar Tesina</a>
+    </div>
+    <div class="obra-imagen">
+      <img id="imagen-obra" src="" alt="">
+    </div>
+  </main>
 
-        <div class="work-info">
-            <h1 id="workTitle" class="work-title"></h1>
-            <p id="workAuthor" class="work-author"></p>
-            <div id="workDescription" class="work-description"></div>
-            
-            <div class="work-actions">
-                <button class="theme-btn" id="themeBtn"></button>
-                <button class="download-btn" id="downloadBtn">
-                    <span class="download-icon">⬇️</span>
-                </button>
-            </div>
-        </div>
-    </main>
-
-    <script src="js/layout.js"></script>
-    <script src="js/obra.js"></script>
+  <script src="js/obra.js"></script>
 </body>
 </html>
