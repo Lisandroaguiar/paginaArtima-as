@@ -1,115 +1,55 @@
-.obra-page {
-    padding-top: 80px;
-    min-height: 100vh;
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
-.work-detail-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+/* Colores de fondo por categoría */
+.categoria-memoria {
+  background-color: #81cff5; /* celeste */
 }
 
-.work-gallery {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+.categoria-conciencia {
+  background-color: #f4a6bb; /* rosa */
 }
 
-.gallery-image {
-    width: 100%;
-    height: 100%;
+.categoria-cuerpo {
+  background-color: #9fc96c; /* verde */
 }
 
-.gallery-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.categoria-percepcion {
+  background-color: #f28361; /* naranja */
 }
 
-.gallery-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 10;
+/* Estilos generales */
+.obra-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
 }
 
-.gallery-nav.prev { left: 20px; }
-.gallery-nav.next { right: 20px; }
-
-.work-info {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+.obra-info {
+  max-width: 50%;
 }
 
-.work-title {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 400;
+.obra-imagen img {
+  max-width: 400px;
+  border-radius: 8px;
 }
 
-.work-author {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
+.btn-descarga {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-.work-description {
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-}
-
-.work-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.theme-btn {
-    flex: 1;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.obra-page.memoria .theme-btn { background: #E3F2FD; color: #4A90E2; }
-.obra-page.percepcion .theme-btn { background: #FFE6D5; color: #FF8C42; }
-.obra-page.cuerpo .theme-btn { background: #E8F5E9; color: #6FBF73; }
-.obra-page.conciencia .theme-btn { background: #FCE4EC; color: #FF85C2; }
-
-.download-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: all 0.3s;
-}
-
-.obra-page.memoria .download-btn { background: #4A90E2; }
-.obra-page.percepcion .download-btn { background: #FF8C42; }
-.obra-page.cuerpo .download-btn { background: #6FBF73; }
-.obra-page.conciencia .download-btn { background: #FF85C2; }
-
-.download-btn:hover {
-    transform: scale(1.1);
+.btn-descarga:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
