@@ -10,7 +10,7 @@ fetch("data/obras.json")
       document.getElementById('titulo-obra').textContent = obra.obra;
       document.getElementById('nombre-alumno').textContent = obra.nombre;
       document.getElementById('descripcion-obra').textContent = obra.descripcion;
-      document.getElementById('imagen-obra').src = obra.imagen || 'placeholder.jpg';
+      document.getElementById('imagen-obra').src = obra.imagenObra || 'placeholder.jpg';
       document.getElementById('descargar-tesina').href = obra.tesina || '#';
 
       // Cambiar color de fondo según categoría
