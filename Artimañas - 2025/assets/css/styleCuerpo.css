@@ -1,0 +1,353 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff5f8;
+  margin: 0;
+  padding: 8rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-section {
+  width: 100%;
+  height: 60%;
+  max-width: 60%;
+  text-align: center;
+}
+
+h2 {
+  color: #9FC96C;
+  margin-bottom: 2rem;
+}
+
+/* ===== CARRUSEL ===== */
+.carousel-container {
+  position: relative;
+  overflow: visible;
+}
+
+.carousel {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+  margin-top: 2%;
+  margin-left: -60%;
+  padding: 4rem 1rem;
+  transition: transform 0.2s ease-out;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.grabbing {
+  cursor: grabbing;
+}
+
+/* ===== CARD ===== */
+.card {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  min-width: 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: transparent;
+  overflow: visible;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgb(244, 181, 190,0);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HALO */
+.card::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle,#6D963C 0%,#6D963C 40%,transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* IMAGEN */
+.card-inner img {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: saturate(0.7) brightness(0.8);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* NOMBRE */
+.card-inner p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.5rem 0;
+  border-radius: 0 0 50% 50%;
+  text-align: center;
+}
+
+/* Capa rosada interior */
+.card-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #9FC96C;
+  mix-blend-mode: overlay;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  transform: scale(0.85);
+  transform-origin: center;
+}
+
+/* ===== BARRA DE PROGRESO ===== */
+
+.progress-wrapper {
+  position: relative;
+  width: 100%;
+  margin: -2rem auto 0;
+  margin-left: -33%;
+  padding: 2rem 0;
+}
+
+.progress-range {
+  width: 100%;
+  height: 22px;
+  border-radius: 40px;
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(
+    90deg,
+    #F4A6BB,
+    #E85C47,
+    #F28E61,
+    #9FC96C,
+    #50A368,
+    #81CFF5
+  );
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Thumb invisible */
+.progress-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+.progress-range::-moz-range-thumb {
+  width: 0;
+  height: 0;
+}
+
+/* Puntos */
+.progress-dots {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.progress-dots span {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Colores reales de tu imagen */
+.progress-dots span:nth-child(1) { background: #F4A6BB; }
+.progress-dots span:nth-child(2) { background: #E85C47; }
+.progress-dots span:nth-child(3) { background: #F28E61; }
+.progress-dots span:nth-child(4) { background: #9FC96C; }
+.progress-dots span:nth-child(5) { background: #50A368; }
+.progress-dots span:nth-child(6) { background: #81CFF5; }
+
+/* Posiciones */
+.progress-dots span:nth-child(1) { left: 0%; }
+.progress-dots span:nth-child(2) { left: 20%; }
+.progress-dots span:nth-child(3) { left: 40%; }
+.progress-dots span:nth-child(4) { left: 60%; }
+.progress-dots span:nth-child(5) { left: 80%; }
+.progress-dots span:nth-child(6) { left: 100%; }
+
+/* ===== HEADER ===== */
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff5f8;
+  border-bottom: 2px solid #f4a6bb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo img {
+  height: 60px;
+  margin: 0%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links img {
+  height: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-links img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* ===== Menú Hamburguesa ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #d85b73;
+  border-radius: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 3rem;
+    background: #fff5f8;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+/* ===== TITULO "CONCIENCIA" + FLECHA ===== */
+
+.section-header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-top: -30rem;
+  margin-left: 5%;
+  margin-right: 0%;
+}
+
+.back-arrow {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #9FC96C;
+  text-decoration: none;
+  margin-top: -7%;
+
+  padding-right: 1rem;
+  transition: 0.2s ease;
+}
+
+.back-arrow:hover {
+  transform: translateX(-5px);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #9FC96C, #266C3A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  filter: drop-shadow(0px 2px 4px rgba(216, 91, 115, 0.35));
+}
+/* ===== FONDO CON PATRÓN ROSA ===== */
+.bg-pattern {
+  background-color: #fff5f8;
+  background-image: url("../img/fondoCuerpo.png");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  background-position: center;
+  opacity: 1;
+  
+}
+
+/* Opcional: capa suave para imitar exactamente tu referencia */
+.bg-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/fondoCuerpo.png");
+  background-repeat: repeat;
+  background-size:500px 500px; /* ajustá para menos repeticiones */
+  opacity: 0.22;
+
+  /* --- LO QUE ROMPE LA GRILLA --- */
+  transform: rotate(8deg); /* probá entre 8 y 18 grados */
+  transform-origin: center;
+}
+
