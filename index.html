@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.pn" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+    
+      <title>Artimañas - 2025</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="main-header">
+  <div class="logo">
+    <a href="index.html"><img src="assets/img/titulo.png" alt="Logo"></a>
+   
+  </div>
+
+  <nav class="nav-links">
+    <a href="#"><img src="assets/img/eventoLogo.png" alt="Inicio"></a>
+    <a href="#"><img src="assets/img/igLogo.png" alt="Obras"></a>
+    <a href="#"><img src="assets/img/ytLogo.png" alt="Contacto"></a>
+  </nav>
+
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== botones ====================-->
+        
+        <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+           <div class="home__images">
+  <!-- ...círculo / logo central ... -->
+
+  <div class="category-buttons">
+    <a href="conciencia.html" class="category-btn conciencia">
+      <img src="assets/img/Group 54.png" alt="Conciencia" class="category-icon">
+      <span class="category-label">Conciencia</span>
+    </a>
+
+    <a href="percepcion.html" class="category-btn percepcion">
+      <img src="assets/img/Group 55.png" alt="Percepción" class="category-icon">
+      <span class="category-label">Percepción</span>
+    </a>
+
+    <a href="cuerpo.html" class="category-btn cuerpo">
+      <img src="assets/img/Group 64.png" alt="Cuerpo" class="category-icon">
+      <span class="category-label">Cuerpo</span>
+    </a>
+
+    <a href="memoria.html" class="category-btn memoria">
+      <img src="assets/img/Group 56.png" alt="Memoria" class="category-icon">
+      <span class="category-label">Memoria</span>
+    </a>
+  </div>
+</div>
+             <div class="home__container container grid">
+               
+
+               <div class=" home__images">
+                 
+                    <div class="home__subcircle"></div>
+                 
+
+                  <img src="assets/img/arimañas.png" alt="image" class="home__img">
+
+                  <img src="assets/img/circles.png" alt="image" class="home__img1">
+                  <!--
+                  <img src="assets/img/chips-2.png" alt="image" class="home__chips-2">
+                  <img src="assets/img/chips-3.png" alt="image" class="home__chips-3">
+                  <img src="assets/img/tomato-1.png" alt="image" class="home__tomato-1">
+                  <img src="assets/img/tomato-2.png" alt="image" class="home__tomato-2">
+                  <img src="assets/img/leaf-3.png" alt="image" class="home__leaf">
+                -->
+               </div>
+             </div>
+         </section>
+
+            <!-- EL POP-UP MODAL -->
+    <div id="countdown-modal-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 modal-transition-enter">
+        <div id="countdown-modal" class="bg-white p-8 sm:p-10 rounded-2xl shadow-2xl max-w-sm w-full relative transform transition duration-300 ease-out scale-100">
+
+            <!-- Botón de Cierre -->
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Contenido del Popup -->
+            <div class="text-center">
+                <!-- Ícono/Logo Minimalista (similar a la imagen) -->
+                <div class="brand-icon mx-auto mb-6">
+                   <div class="brand-icon mx-auto mb-6">
+    <img src="assets/img/arimañas.png" alt="Logo Artimañas" class="w-20 h-20 object-contain">
+</div>
+                </div>
+
+                <h2 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">
+                    ¡Artimañas 2025  Próximamente!
+                </h2>
+                <p class="text-sm text-gray-500 mb-6">
+                    29 / 11 / 2025 - 19:00hs
+                </p>
+
+                <!-- Cuenta Regresiva -->
+                <div class="flex justify-center space-x-2 sm:space-x-4 mb-8">
+                    <!-- Días -->
+                    <div class="flex flex-col items-center p-3 bg-indigo-50 rounded-lg w-1/4">
+                        <span id="countdown-days" class="text-2xl sm:text-3xl font-bold text-indigo-700">00</span>
+                        <span class="text-xs font-medium text-indigo-500 mt-1">Días</span>
+                    </div>
+
+                    <!-- Horas -->
+                    <div class="flex flex-col items-center p-3 bg-indigo-50 rounded-lg w-1/4">
+                        <span id="countdown-hours" class="text-2xl sm:text-3xl font-bold text-indigo-700">00</span>
+                        <span class="text-xs font-medium text-indigo-500 mt-1">Horas</span>
+                    </div>
+
+                    <!-- Minutos -->
+                    <div class="flex flex-col items-center p-3 bg-indigo-50 rounded-lg w-1/4">
+                        <span id="countdown-minutes" class="text-2xl sm:text-3xl font-bold text-indigo-700">00</span>
+                        <span class="text-xs font-medium text-indigo-500 mt-1">Min.</span>
+                    </div>
+
+                    <!-- Segundos -->
+                    <div class="flex flex-col items-center p-3 bg-indigo-50 rounded-lg w-1/4">
+                        <span id="countdown-seconds" class="text-2xl sm:text-3xl font-bold text-indigo-700">00</span>
+                        <span class="text-xs font-medium text-indigo-500 mt-1">Seg.</span>
+                    </div>
+                </div>
+
+                
+
+                <!-- Texto Inferior -->
+                <p class="text-xs text-gray-400 mt-5">
+                    Facultad de Artes | Sede Fonseca | Diagonal 78 esq. 62
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+      <!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up">
+<i class="ri-arrow-up-line"></i>
+</a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+      
+      <script>
+        // --- CONFIGURACIÓN ---
+        // 1. Establece la fecha y hora de destino (Año, Mes (0-11), Día, Hora, Minuto, Segundo)
+        // Ejemplo: 29 de Noviembre de 2026 a las 19:00:00
+        const countdownDate = new Date("November 29, 2025 19:00:00").getTime();
+        
+        // Elementos del DOM
+        const modalOverlay = document.getElementById('countdown-modal-overlay');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const daysEl = document.getElementById('countdown-days');
+        const hoursEl = document.getElementById('countdown-hours');
+        const minutesEl = document.getElementById('countdown-minutes');
+        const secondsEl = document.getElementById('countdown-seconds');
+
+        // Función para mostrar el modal
+        function showModal() {
+            modalOverlay.classList.remove('hidden'); // Aseguramos que es visible
+            // Aplicamos la clase de entrada para la transición (el CSS maneja el resto)
+            modalOverlay.classList.add('modal-transition-enter-active');
+        }
+
+        // Función para ocultar el modal
+        function hideModal() {
+            // Aplicamos la clase de salida para la transición
+            modalOverlay.classList.remove('modal-transition-enter-active');
+            modalOverlay.classList.add('modal-transition-leave-active');
+
+            // Ocultar el elemento completamente después de la transición
+            setTimeout(() => {
+                modalOverlay.classList.add('hidden');
+            }, 300); // 300ms es la duración de la transición en CSS
+        }
+
+        // Función para formatear el número con dos dígitos (ej: 5 -> 05)
+        function formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+        }
+
+        // Función principal de la cuenta regresiva
+        function startCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            // Cálculos de tiempo
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (distance < 0) {
+                // Si la cuenta regresiva ha terminado
+                clearInterval(interval);
+                daysEl.textContent = '00';
+                hoursEl.textContent = '00';
+                minutesEl.textContent = '00';
+                secondsEl.textContent = '00';
+                // Opcional: Mostrar mensaje de "Evento en curso" en el modal
+                document.querySelector('h2').textContent = "¡El evento ha comenzado!";
+                return;
+            }
+
+            // Actualizar el DOM
+            daysEl.textContent = formatTime(days);
+            hoursEl.textContent = formatTime(hours);
+            minutesEl.textContent = formatTime(minutes);
+            secondsEl.textContent = formatTime(seconds);
+        }
+
+        // --- INICIALIZACIÓN ---
+
+        // 1. Iniciar la cuenta regresiva
+        // Ejecutar inmediatamente y luego cada segundo
+        startCountdown();
+        const interval = setInterval(startCountdown, 1000);
+
+        // 2. Mostrar el modal al cargar la página
+        window.onload = function() {
+            // Inicialmente, añadimos 'hidden' para que no se vea antes del JS.
+            // Lo quitamos aquí solo si quieres que aparezca inmediatamente.
+            // Para la transición, es mejor que inicialmente tenga la opacidad 0 (modal-transition-enter).
+            showModal();
+        };
+
+        // 3. Configurar el evento para cerrar el modal
+        closeModalBtn.addEventListener('click', hideModal);
+
+        // Opcional: Cerrar el modal haciendo clic en el fondo
+        modalOverlay.addEventListener('click', (e) => {
+            // Solo cerramos si se hace clic directamente en el overlay y no en el modal en sí
+            if (e.target === modalOverlay) {
+                hideModal();
+            }
+        });
+
+    </script>
+     <script src="assets/js/layout.js"></script>
+    <script src="assets/js/home.js"></script>
+   </body>
+</html>
