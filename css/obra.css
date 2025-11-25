@@ -1,55 +1,173 @@
+/* Resets básicos */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Prompt", sans-serif;
   color: #fff;
-  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 
-/* Colores de fondo por categoría */
-.categoria-memoria {
-  background-color: #81cff5; /* celeste */
+/* ===== FONDO DINÁMICO ===== */
+.fondo-forma {
+  position: fixed; /* Fixed para que no se corte al scrollear */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  /* Aquí iría tu SVG de fondo */
+  mask-image: url("../img/forma-fondo.svg");
+  mask-size: contain;
+  background-color: rgba(255,255,255,0.15); /* Color fallback */
 }
 
-.categoria-conciencia {
-  background-color: #f4a6bb; /* rosa */
-}
+/* Colores por categoría */
+.categoria-memoria { background-color: #81cff5; }
+.categoria-conciencia { background-color: #f4a6bb; }
+.categoria-cuerpo { background-color: #9fc96c; } /* El verde de tu ejemplo */
+.categoria-percepcion { background-color: #f28361; }
 
-.categoria-cuerpo {
-  background-color: #9fc96c; /* verde */
-}
 
-.categoria-percepcion {
-  background-color: #f28361; /* naranja */
-}
-
-/* Estilos generales */
-.obra-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem;
-}
-
-.obra-info {
-  max-width: 50%;
-}
-
-.obra-imagen img {
-  max-width: 400px;
-  border-radius: 8px;
-}
-
-.btn-descarga {
+.img-boton, .btn-download {
+  /* Reseteamos estilos base para que solo mande el SVG */
+  background: none !important; 
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  
+  /* Aseguramos que sea un bloque para que el usuario pueda hacer click */
   display: inline-block;
-  margin-top: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  color: white;
-  text-decoration: none;
-  transition: background 0.3s;
+  
+  /* Transición suave si hay cambios de opacidad */
+  transition: opacity 0.3s;
 }
 
-.btn-descarga:hover {
-  background: rgba(255, 255, 255, 0.4);
+.btn-download{cursor: pointer;}
+
+.categoria-memoria .img-boton {content: url("../img/tesina-memoria.svg");}
+.categoria-conciencia .img-boton {content: url("../img/tesina-conciencia.svg");}
+.categoria-cuerpo .img-boton {content: url("../img/tesina-cuerpo.svg");}
+.categoria-percepcion .img-boton {content: url("../img/tesina-percepcion.svg");}
+
+.categoria-memoria .btn-download {content: url("../img/descarga-memoria.svg");}
+.categoria-conciencia .btn-download {content: url("../img/descarga-conciencia.svg");}
+.categoria-cuerpo .btn-download {content: url("../img/descarga-cuerpo.svg");}
+.categoria-percepcion .btn-download {content: url("../img/descarga-percepcion.svg");}
+
+
+/* ===== HERO SECTION ===== */
+.obra-hero {
+  width: 100%;
+  height: 60vh; /* Altura relativa a la pantalla */
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+  /* La curva suave estilo "sonrisa" */
+  border-radius: 0 0 100% 100% / 0 0 100% 100%;
+}
+
+.obra-hero img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* Degradado para leer el texto sobre la foto */
+.hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  pointer-events: none;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.1;
+}
+.hero-text p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Flechas de Navegación */
+.nav-arrow {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  padding: 10px;
+  z-index: 5;
+  transition: transform 0.2s;
+}
+.nav-arrow:hover { color: white; transform: translateY(-50%) scale(1.1); }
+.left { left: 20px; }
+.right { right: 20px; }
+
+/* ===== DESCRIPCIÓN ===== */
+.obra-descripcion {
+  max-width: 64rem;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+.video-container {
+  margin: 3rem 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+}
+.video-container iframe { width: 100%; height: 100%; border: none; }
+
+/* Botones Footer */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0 5rem 0;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 48rem) {
+  .obra-hero { 
+    height: 50vh; 
+    border-radius: 0 0 150% 150% / 0 0 70% 70%; /* Curva menos agresiva en móvil */
+  }
+
+  /*.botones-container {
+    display: grid;
+    place-items: center;
+  }*/
+  .obra-descripcion {
+    max-width: 40rem;
+    font-size: 1.1rem;
+  }
+  
+  .hero-text h1 { font-size: 2rem; }
+  
+  .nav-arrow { font-size: 1.8rem; left: 10px; }
+  .nav-arrow.right { right: 10px; left: auto; }
 }
