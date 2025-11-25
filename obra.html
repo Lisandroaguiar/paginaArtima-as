@@ -3,22 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Obra</title>
-  <link rel="stylesheet" href="css/obra.css" />
+  <title>Obra - Artimañas 2025</title>
+  <link rel="stylesheet" href="assets/css/obra.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body id="obra-page">
-  <main class="obra-container">
-    <div class="obra-info">
+  <div class="fondo-forma"></div>
+
+  <section class="obra-hero">
+    <img id="imagen-obra" src="" alt="Imagen de la obra">
+    
+    <div class="hero-overlay"></div>
+
+    <a id="nav-prev" href="#" class="nav-arrow left">❮</a>
+    <a id="nav-next" href="#" class="nav-arrow right">❯</a>
+
+    <div class="hero-text">
       <h1 id="titulo-obra"></h1>
       <p id="nombre-alumno"></p>
-      <p id="descripcion-obra"></p>
-      <a id="descargar-tesina" class="btn-descarga" href="#" target="_blank">Descargar Tesina</a>
     </div>
-    <div class="obra-imagen">
-      <img id="imagen-obra" src="" alt="">
-    </div>
-  </main>
+  </section>
 
-  <script src="js/obra.js"></script>
+  <section class="obra-descripcion">
+    <p id="descripcion-obra"></p>
+    
+    <div id="video-obra" class="video-container"></div>
+
+    <div class="botones-container">
+        <div id="link-tesina" class="img-boton" href="#" target="">
+        </div>
+        <a id="descargar-tesina" class="btn-download" href="#" download>
+        </a>
+    </div>
+  </section>
+
+  <script src="assets/js/obra.js"></script>
 </body>
 </html>
